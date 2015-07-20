@@ -3,8 +3,6 @@ Torrent crawler to get bit torrent from kickass.io and start uTorrent to automat
 
 ###About
 
-From Udacity:
-
 In this project, I have written a Scrapy crawler that uses the get bit torrent from kickass.io and start uTorrent to download 
 any resource automatically. 
 This project demonstrates familiarity with:
