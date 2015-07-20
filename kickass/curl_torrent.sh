@@ -9,10 +9,12 @@ function usage(){
     exit 1
 }
 
-if [ ! -n "$1"]; then
+if [ ! -n "$1" ]; then
     usage
 fi
 
-name=`echo $1 | sed 's/.*kickass.to.//'`".torrent"
+name=`echo $2 | sed -n 's/ //g'`
+name=$name".torrent"
+echo "file name: "$name
 curl --globoff --compressed -A '$AGENT' -L --post302 $1 > $name
 btc add $name
